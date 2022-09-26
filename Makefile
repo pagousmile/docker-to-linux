@@ -17,6 +17,9 @@ ubuntu: ubuntu.img
 .PHONY:
 alpine: alpine.img
 
+.PHONY:
+debian-gnome: debian-gnome.img
+
 %.tar:
 	@echo ${COL_GRN}"[Dump $* directory structure to tar archive]"${COL_END}
 	docker build -f $*/Dockerfile -t ${REPO}/$* .
